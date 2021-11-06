@@ -167,7 +167,7 @@ should return the photo for any one of those 12 labels, if searched independentl
 (“show me dogs ”) or in groups (“show me cats and dogs ”).
 a. Also, if you search for any custom label, the search should return all the
 results with that custom label.
-4. All other functionality should be working as described above.
+
 
 
 
