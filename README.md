@@ -1,1 +1,3 @@
 # Smart-photo-album. 
+
+.
