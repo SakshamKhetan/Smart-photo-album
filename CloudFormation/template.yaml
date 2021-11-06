@@ -1,0 +1,17 @@
+AWSTemplateFormatVersion : '2010-09-09'
+Transform: AWS::Serverless-2016-10-31
+Resources:
+  index-photosFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      FunctionName: index-photos-2
+      Handler: index.lambda_handler
+      Runtime: python3.7
+      CodeUri: ./Lambdas/LF1.py
+  search-photosFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      FunctionName: search-photos-2
+      Handler: search.lambda_handler
+      Runtime: python3.7
+      CodeUri: ./Lambdas/LF2.py
