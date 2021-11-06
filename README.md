@@ -1,1 +1,1 @@
-# Smart-photo-album
+# Smart-photo-album. 
