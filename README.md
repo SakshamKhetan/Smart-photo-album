@@ -168,8 +168,8 @@ should return the photo for any one of those 12 labels, if searched independentl
 a. Also, if you search for any custom label, the search should return all the
 results with that custom label.
 4. All other functionality should be working as described above.
-ANNEX
-Architecture Diagram
+
+
 
 
 
