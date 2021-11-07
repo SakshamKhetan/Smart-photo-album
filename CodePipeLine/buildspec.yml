@@ -1,0 +1,12 @@
+version: 0.1
+phases:
+  install:
+    commands:
+      - aws cloudformation package --template-file lambdaTemp.yaml --s3-bucket p1-codepipeline --output-template-file  outputTemplate.yaml
+      - aws cloudformation package --template-file frontTemp.yml --s3-bucket p1-codepipeline --output-template-file outputTemplate.yaml
+artifacts:
+  type: zip
+  files:
+    - lambdaTemp.yml
+    - frontTemp.yml
+    - outputTemplate.yaml
