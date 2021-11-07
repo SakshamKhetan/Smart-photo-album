@@ -22,9 +22,7 @@ def lambda_handler(event, context):
 
     print(event)
     q1 = event['queryStringParameters']['q']
-    print('nowww')
     print(q1)
-    print('now2222')
     if(q1 == "searchAudio"):
         q1 = convert_speechtotext()
 
@@ -79,9 +77,7 @@ def get_photo_path(labels):
     labels = unique_labels
     print("inside get photo path", labels)
     for i in labels:
-        print("hii prats")
         path = host + '/_search?q=labels:'+i
-        print("hii tammy")
         print(host)
         print(path)
         response = requests.get(path, headers=headers,
@@ -126,7 +122,6 @@ def convert_speechtotext():
             TranscriptionJobName=job_name)
         if status['TranscriptionJob']['TranscriptionJobStatus'] in ['COMPLETED', 'FAILED']:
             break
-        print("Not ready yet...")
         time.sleep(5)
 
     print("Transcript URL: ", status)
