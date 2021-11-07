@@ -1,18 +1,20 @@
 # Smart-photo-album. 
 
-Implement a photo album web application, that can be searched using natural language
+**Implement a photo album web application, that can be searched using natural language
 through both text and voice. You will learn how to use Lex, ElasticSearch, and
 Rekognition to create an intelligent search layer to query your photos for people,
-objects, actions, landmarks and more.
-Outline:
-Eight components:
-1. Launch an ElasticSearch instance1
+objects, actions, landmarks and more.**
+
+**Outline:
+Eight components:**
+
+**1. Launch an ElasticSearch instance1**
 a. Using AWS ElasticSearch service2, create a new domain called “photos” .
 b. Make note of the Security Group ( SG1 ) you attach to the domain.
 c. Deploy the service inside a VPC3.
 i. This prevents unauthorized internet access to your service.
 
-2. Upload & index photos
+**2. Upload & index photos**
 a. Create a S3 bucket ( B2 ) to store the photos.
 b. Create a Lambda function ( LF1 ) called “index-photos” .
 i. Launch the Lambda function inside the same VPC as
@@ -53,7 +55,7 @@ Use the following schema for the JSON object:
 ]
 }
 
-3. Search
+**3. Search**
 a. Create a Lambda function ( LF2 ) called “search-photos” .
 i. Launch the Lambda function inside the same VPC as
 ElasticSearch. This ensures that the function can reach the
@@ -78,7 +80,7 @@ accordingly (as per the API spec).
 the search.
 iii. Otherwise, return an empty array of results (as per the API spec).
 
-4. Build the API layer
+**4. Build the API layer**
 a. Build an API using API Gateway.
 i. The Swagger API documentation for the API can be found here:
 https://github.com/001000001/ai-photo-search-columbia-f2018/blob
@@ -95,7 +97,7 @@ c. Setup an API key for your two API methods.
 d. Deploy the API.
 e. Generate a SDK for the API ( SDK1 ).
 
-5. Frontend
+**5. Frontend**
 a. Build a simple frontend application that allows users to:
 i. Make search requests to the GET /search endpoint
 ii. Display the results (photos) resulting from the query
@@ -116,7 +118,7 @@ d. Upload the frontend files to the bucket ( B2 ).
 e. Integrate the API Gateway-generated SDK ( SDK1 ) into the frontend, to
 connect your API.
 
-6. Implement Voice accessibility in the frontend
+**6. Implement Voice accessibility in the frontend**
 a. Give the frontend user the choice to use voice rather than text to perform
 the search.
 b. Use Amazon Transcribe10 on the frontend to transcribe speech to text
@@ -126,13 +128,13 @@ c. Note: You can use a Google-like UI (see below) for implementing the
 search: 1. input field for text searches and 2. microphone icon for voice
 interactions.
 
-7. Deploy your code using AWS CodePipeline12
+**7. Deploy your code using AWS CodePipeline**
 a. Define a pipeline (P1) in AWS CodePipeline that builds and deploys the
 code for/to all your Lambda functions
 b. Define a pipeline (P2) in AWS CodePipeline that builds and deploys your
 frontend code to its corresponding S3 bucket
 
-8. Create a AWS CloudFormation13 template for the stack
+**8. Create a AWS CloudFormation13 template for the stack**
 a. Create a CloudFormation template (T1) to represent all the infrastructure
 resources (ex. Lambdas, ElasticSearch, API Gateway, CodePipeline, etc.)
 and permissions (IAM policies, roles, etc.).
