@@ -35,14 +35,14 @@ def lambda_handler(event, context):
     print(labels)
     
     format = {'objectKey':key_name,'bucket':bucket_name,'createdTimestamp':timestamp,'labels':labels}
-    print('I am here')
+    
     url = "https://search-photos1-fhnu7klov65xt44ugjncszgxba.us-east-1.es.amazonaws.com/photo-album/_doc"
     headers = {"Content-Type": "application/json"}
     
     r = requests.post(url, data=json.dumps(format).encode("utf-8"), headers=headers, auth=(keyy, passwrd))
     
     print(r.text)
-    print('I am here too')
+    
     return {
         'statusCode': 200,
         'body': json.dumps('Hello from Lambda!')
