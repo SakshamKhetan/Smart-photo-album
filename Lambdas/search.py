@@ -81,7 +81,7 @@ def get_photo_path(labels):
         print(host)
         print(path)
         response = requests.get(path, headers=headers,
-                                auth=('Tamanna', 'Mummy@100'))
+                                auth=(keye, psswrd))
         print("response from ES", response)
         dict1 = json.loads(response.text)
         hits_count = dict1['hits']['total']['value']
