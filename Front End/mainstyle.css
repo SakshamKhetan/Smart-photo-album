@@ -7,7 +7,7 @@ body {
 form.example input[type=text] {
     padding: 10px;
     font-size: 17px;
-    border: 1px solid #57068c;
+    border: 1px solid #0d4270;
     float: left;
     width: 80%;
     background: #f1f1f1;
@@ -16,7 +16,7 @@ form.example button {
     float: left;
     width: 5%;
     padding: 10px;
-    background:#57068c;
+    background:#0d4270;
     color: white;
     font-size: 17px;
     border: 1px solid black;
@@ -24,7 +24,7 @@ form.example button {
     cursor: pointer;
 }
 form.example button:hover {
-    background: #be75ee;
+    background: #e66879;
 }
 form.example::after {
     content: "";
@@ -64,17 +64,31 @@ body {
 }
 /* Style the buttons */
 .btn {
-    border: none;
+    border:lightcoral;
     outline: none;
     padding: 10px 16px;
-    background-color: #57068c;
+    background-color: #0d4270;
     cursor: pointer;
     font-size: 18px;
+    font-family:fantasy;
 }
 .btn:hover {
     background-color: #ddd;
 }
 .btn.active {
-    background-color: #57068c;
-    color: #57068c;
+    background-color: #0d4270;
+    color: #0d4270;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+h2
+{
+    color: crimson;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    border-width: thick;
+}
+h1
+{
+color:orange;
+font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+font-weight: bold;
 }
