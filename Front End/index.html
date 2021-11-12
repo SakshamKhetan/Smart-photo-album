@@ -7,7 +7,6 @@
 
     </head>
     <body style="margin-left:30px; margin-right: 30px;">
-        <h1> This is new change</h1>
 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
@@ -30,9 +29,9 @@
             <button type="button" onclick="submitSearch(event)" name="btn-search"><i class="fa fa-search"></i></button>
         </form>
         
-        <form class="example" style="margin-top: 20px;">
-            <button type="button" id="recordButton" name="btn-voice" style="width:150px;">Start Recording</button>
-            <button type="button" id="stopButton" title="Stop" name="btn-voice"style="margin-left: 10px; width:150px;">
+        <form class="example" style="margin-top: 30px;">
+            <button type="button" id="recordButton" name="btn-voice" style="width:100px;">Start Recording</button>
+            <button type="button" id="stopButton" title="Stop" name="btn-voice"style="margin-left: 10px; width:100px;">
                 Stop Recording</button>
         </form>
 
@@ -45,8 +44,12 @@
             <button type="button" onclick="submitPhoto(event)" name="btn-image" style="width:150px;">Upload</button>
         </form>
 
+        <div>
+            <input id="note_customtag" type="text" class="form-control" placeholder="Input Custom tag!" >
+    </div>
+
         <div class="header" id="myHeader">
-            <h1>Welcome to Photo Album</h1>
+            <h1>Welcome to Smart Photo Album</h1>
         </div>
         <!-- Photo Grid -->
         <div class="row">
